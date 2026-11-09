@@ -1,0 +1,103 @@
+{
+  "app_id": "codeserverdocker",
+  "title": "Code Server",
+  "image": "codercom/code-server:4.145.2",
+  "repo_name": "codeserver",
+  "mode": "plain",
+  "container_port": 8080,
+  "category": [
+    "Development_Tools"
+  ],
+  "volumes": [
+    {
+      "host": "/Volume1/DockerAppData/codeserverdocker/data",
+      "container": "/home/coder"
+    }
+  ],
+  "env": {
+    "TZ": "Asia/Shanghai"
+  },
+  "auth": "coder",
+  "upstream_url": "https://github.com/coder/code-server",
+  "upstream_license": "MIT",
+  "descript": "Code Server runs VS Code in your browser: edit files, open a terminal, run git and install extensions on your NAS from any device - no client software. The container already runs as an unprivileged user (uid 1000), so the editor can only touch what that user can, and everything you create (settings, extensions, projects) stays in the application data folder.",
+  "release_note": "1. First release: Code Server 4.145.2 from Docker Hub as a non-root container (the image already runs as uid 1000). Browser IDE with terminal, git and extensions; settings and projects persist in the application data folder.",
+  "important": "Requires DockerEngine (installed automatically if missing). The first start generates a random login password, stored in DockerAppData/codeserverdocker/data/.config/code-server/config.yaml - open that file to read or change it, then restart the app. The built-in terminal runs as uid 1000 on your NAS: keep this app on your LAN and never expose it to the internet without a TLS reverse proxy and a strong password. Back up the data folder before uninstalling with data removal.",
+  "probe": {
+    "user_in_image": "1000",
+    "entrypoint": [
+      "/usr/bin/entrypoint.sh",
+      "--bind-addr",
+      "0.0.0.0:8080",
+      "."
+    ],
+    "cmd": null,
+    "exposed_ports": [
+      8080
+    ],
+    "declared_volumes": [],
+    "image_healthcheck": [],
+    "digest": "codercom/code-server@sha256:09565f9e07f5624554e295e8bab0e2fec4a7c533eb3cff459ed6596a4d3d7c1c",
+    "architecture": "x86_64",
+    "platforms": [
+      "x86_64",
+      "aarch64"
+    ],
+    "http_client_in_image": "curl",
+    "trial_run": {
+      "ok": true,
+      "http_code": "302",
+      "state": "running",
+      "paths": [
+        "/home"
+      ],
+      "host_port": 18000,
+      "log_tail": "config file /home/coder/.config/code-server/config.yaml\n[2026-11-09T15:34:23.328Z] info  HTTP server listening on http://0.0.0.0:8080/\n[2026-11-09T15:34:23.329Z] info    - Authentication is enabled\n[2026-11-09T15:34:23.329Z] info      - Using password from /home/coder/.config/code-server/config.yaml\n[2026-11-09T15:34:23.329Z] info    - Not serving HTTPS\n[2026-11-09T15:34:23.329Z] info  Session server listening on /home/coder/.local/share/code-server/code-server-ipc.sock\n[15:34:24] \n\n\n\n\n[15:34:24] StorageMainService: creating application shared storage\n[reconnection-grace-time] No CLI argument provided, using default: 10800000ms (10800s)\n[15:34:24] [AgentHostChannel] Registered lazy IPC channel 'agentHostProxy' (upstream: /tmp/vscode-ipc-1210f53d-7cee-4865-b06d-bf30bddc7de9.sock)\n[15:34:24] Extension host agent started.\n[15:34:25] [shared storage] Creating shared storage database at '/home/coder/.vscode-oss-shared/sharedStorage/state.vscdb' (wasCreated: true)\n[15:34:25] [shared storage] Initializing fallback application storage (path: /home/coder/.local/share/code-server/User/globalStorage/state.vscdb)\n[15:34:25] Started initializing default profile extensions in extensions installation folder. file:///home/coder/.local/share/code-server/extensions\n[15:34:25] [shared storage] Fallback application storage initialized with 3 items\n[15:34:25] Completed initializing default profile extensions in extensions installation folder. file:///home/coder/.local/share/code-server/extensions",
+      "files_in_mounts": ""
+    },
+    "docker_hub": {},
+    "github": {}
+  },
+  "healthcheck": [
+    "CMD-SHELL",
+    "curl -s -o /dev/null http://127.0.0.1:8080/healthz || exit 1"
+  ],
+  "platform": "x86_64",
+  "user": "1000:1000",
+  "publisher": "Moechz",
+  "compose_project": "codeserverdocker",
+  "github_repo": "codeserver",
+  "upstream_version": "4.145.2",
+  "release_tag_prefix": "v",
+  "version": "4.145.2-1",
+  "help": "https://github.com/Moechz/codeserver/issues",
+  "official": "https://github.com/coder/code-server",
+  "license": "MIT",
+  "docker_socket": false,
+  "group_add": [],
+  "healthcheck_start_period": "30s",
+  "translations": {
+    "zh-cn": {
+      "descript": "Code Server 把 VS Code 搬进浏览器：在任何设备上打开网页就能编辑 NAS 上的文件、开终端、跑 git、装扩展，不用装客户端。容器本身就以内置的非 root 用户（uid 1000）运行，编辑器只能碰到这个用户有权限的东西；设置、扩展和项目都保存在应用数据目录里。",
+      "important": "需要 DockerEngine（缺失时应用中心会自动安装）。首次启动会生成随机登录密码，保存在 DockerAppData/codeserverdocker/data/.config/code-server/config.yaml，打开该文件即可查看或修改，然后重启应用生效。内置终端以 uid 1000 操作你的 NAS：请只在内网使用，暴露到公网前务必配置带 TLS 的反向代理并设置强密码。卸载并删除数据前请先备份 data 目录。",
+      "release_note": "1. 首个版本：基于 Docker Hub 的 Code Server 4.145.2，容器本身即以 uid 1000 非 root 运行。浏览器 IDE，支持终端、git 与扩展；设置与项目持久化在应用数据目录。"
+    },
+    "zh-hk": {
+      "descript": "Code Server 把 VS Code 搬進瀏覽器：在任何裝置上打開網頁就能編輯 NAS 上的檔案、開終端、跑 git、裝擴充功能，不用裝客戶端。容器本身就以內建的非 root 使用者（uid 1000）運行，編輯器只能碰到這個使用者有權限的東西；設定、擴充功能與專案都保存在應用資料目錄裡。",
+      "important": "需要 DockerEngine（缺少時應用中心會自動安裝）。首次啟動會產生隨機登入密碼，保存在 DockerAppData/codeserverdocker/data/.config/code-server/config.yaml，打開該檔案即可查看或修改，然後重啟應用生效。內建終端以 uid 1000 操作你的 NAS：請只在內網使用，公開到互聯網前務必配置帶 TLS 的反向代理並設定強密碼。解除安裝並刪除資料前請先備份 data 目錄。",
+      "release_note": "1. 首個版本：基於 Docker Hub 的 Code Server 4.145.2，容器本身即以 uid 1000 非 root 運行。瀏覽器 IDE，支援終端、git 與擴充功能；設定與專案持久化在應用資料目錄。"
+    }
+  },
+  "data_notes": "`/home/coder` (mounted from `DockerAppData/codeserverdocker/data`) holds everything: `.config/code-server/config.yaml` (password/auth), `.local/share/code-server` (extensions and user settings) and whatever project folders you create.",
+  "design_notes": [
+    "**Already non-root.** The upstream image runs as uid 1000 (`coder`); the package pins the same `user: \"1000:1000\"` so file ownership matches the volume.",
+    "**One volume, one port.** `/home/coder` is the only persistent path and 8080 the only published port.",
+    "**Password from the config file.** No secret is baked into the package: the image generates one on first start and keeps it in the data folder."
+  ],
+  "limitations": [
+    "- The built-in terminal runs commands as uid 1000 on the NAS; treat access to this app like SSH access.",
+    "- The web UI is plain HTTP; use a TLS reverse proxy and a strong password before exposing it.",
+    "- Extensions are installed from the internet, so the NAS needs outbound access to the VS Code marketplace (or you install VSIX files manually)."
+  ],
+  "host_port": 8035
+}

@@ -1,0 +1,195 @@
+# ===========================================================================
+# Multilingual file for the TOS 7 Docker application "codeserverdocker".
+# File name MUST be: <appid>.lang.  23-language superset (14 required by TOS).
+# The App Center picks the text matching the user's device language;
+# untranslated nodes fall back to English, which the official guide allows.
+# Fields: name (app title), auth (upstream author), descript (up to 512
+# chars), release_note, important (up to 512 chars).
+# Translations come from tosapp.json "translations"; run
+#   tosdocker lang <app>          to re-render this file
+#   tosdocker translate <app>     to see what still needs translating
+# ===========================================================================
+[en-us]
+name         = "Code Server"
+auth         = "coder"
+version      = "@@VERSION@@"
+descript     = "Code Server runs VS Code in your browser: edit files, open a terminal, run git and install extensions on your NAS from any device - no client software. The container already runs as an unprivileged user (uid 1000), so the editor can only touch what that user can, and everything you create (settings, extensions, projects) stays in the application data folder."
+release_note = "1. First release: Code Server 4.145.2 from Docker Hub as a non-root container (the image already runs as uid 1000). Browser IDE with terminal, git and extensions; settings and projects persist in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). The first start generates a random login password, stored in DockerAppData/codeserverdocker/data/.config/code-server/config.yaml - open that file to read or change it, then restart the app. The built-in terminal runs as uid 1000 on your NAS: keep this app on your LAN and never expose it to the internet without a TLS reverse proxy and a strong password. Back up the data folder before uninstalling with data removal."
+
+[zh-cn]
+name         = "Code Server"
+auth         = "coder"
+version      = "@@VERSION@@"
+descript     = "Code Server 把 VS Code 搬进浏览器：在任何设备上打开网页就能编辑 NAS 上的文件、开终端、跑 git、装扩展，不用装客户端。容器本身就以内置的非 root 用户（uid 1000）运行，编辑器只能碰到这个用户有权限的东西；设置、扩展和项目都保存在应用数据目录里。"
+release_note = "1. 首个版本：基于 Docker Hub 的 Code Server 4.145.2，容器本身即以 uid 1000 非 root 运行。浏览器 IDE，支持终端、git 与扩展；设置与项目持久化在应用数据目录。"
+important    = "需要 DockerEngine（缺失时应用中心会自动安装）。首次启动会生成随机登录密码，保存在 DockerAppData/codeserverdocker/data/.config/code-server/config.yaml，打开该文件即可查看或修改，然后重启应用生效。内置终端以 uid 1000 操作你的 NAS：请只在内网使用，暴露到公网前务必配置带 TLS 的反向代理并设置强密码。卸载并删除数据前请先备份 data 目录。"
+
+[zh-hk]
+name         = "Code Server"
+auth         = "coder"
+version      = "@@VERSION@@"
+descript     = "Code Server 把 VS Code 搬進瀏覽器：在任何裝置上打開網頁就能編輯 NAS 上的檔案、開終端、跑 git、裝擴充功能，不用裝客戶端。容器本身就以內建的非 root 使用者（uid 1000）運行，編輯器只能碰到這個使用者有權限的東西；設定、擴充功能與專案都保存在應用資料目錄裡。"
+release_note = "1. 首個版本：基於 Docker Hub 的 Code Server 4.145.2，容器本身即以 uid 1000 非 root 運行。瀏覽器 IDE，支援終端、git 與擴充功能；設定與專案持久化在應用資料目錄。"
+important    = "需要 DockerEngine（缺少時應用中心會自動安裝）。首次啟動會產生隨機登入密碼，保存在 DockerAppData/codeserverdocker/data/.config/code-server/config.yaml，打開該檔案即可查看或修改，然後重啟應用生效。內建終端以 uid 1000 操作你的 NAS：請只在內網使用，公開到互聯網前務必配置帶 TLS 的反向代理並設定強密碼。解除安裝並刪除資料前請先備份 data 目錄。"
+
+[fr-fr]
+name         = "Code Server"
+auth         = "coder"
+version      = "@@VERSION@@"
+descript     = "Code Server runs VS Code in your browser: edit files, open a terminal, run git and install extensions on your NAS from any device - no client software. The container already runs as an unprivileged user (uid 1000), so the editor can only touch what that user can, and everything you create (settings, extensions, projects) stays in the application data folder."
+release_note = "1. First release: Code Server 4.145.2 from Docker Hub as a non-root container (the image already runs as uid 1000). Browser IDE with terminal, git and extensions; settings and projects persist in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). The first start generates a random login password, stored in DockerAppData/codeserverdocker/data/.config/code-server/config.yaml - open that file to read or change it, then restart the app. The built-in terminal runs as uid 1000 on your NAS: keep this app on your LAN and never expose it to the internet without a TLS reverse proxy and a strong password. Back up the data folder before uninstalling with data removal."
+
+[de-de]
+name         = "Code Server"
+auth         = "coder"
+version      = "@@VERSION@@"
+descript     = "Code Server runs VS Code in your browser: edit files, open a terminal, run git and install extensions on your NAS from any device - no client software. The container already runs as an unprivileged user (uid 1000), so the editor can only touch what that user can, and everything you create (settings, extensions, projects) stays in the application data folder."
+release_note = "1. First release: Code Server 4.145.2 from Docker Hub as a non-root container (the image already runs as uid 1000). Browser IDE with terminal, git and extensions; settings and projects persist in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). The first start generates a random login password, stored in DockerAppData/codeserverdocker/data/.config/code-server/config.yaml - open that file to read or change it, then restart the app. The built-in terminal runs as uid 1000 on your NAS: keep this app on your LAN and never expose it to the internet without a TLS reverse proxy and a strong password. Back up the data folder before uninstalling with data removal."
+
+[it-it]
+name         = "Code Server"
+auth         = "coder"
+version      = "@@VERSION@@"
+descript     = "Code Server runs VS Code in your browser: edit files, open a terminal, run git and install extensions on your NAS from any device - no client software. The container already runs as an unprivileged user (uid 1000), so the editor can only touch what that user can, and everything you create (settings, extensions, projects) stays in the application data folder."
+release_note = "1. First release: Code Server 4.145.2 from Docker Hub as a non-root container (the image already runs as uid 1000). Browser IDE with terminal, git and extensions; settings and projects persist in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). The first start generates a random login password, stored in DockerAppData/codeserverdocker/data/.config/code-server/config.yaml - open that file to read or change it, then restart the app. The built-in terminal runs as uid 1000 on your NAS: keep this app on your LAN and never expose it to the internet without a TLS reverse proxy and a strong password. Back up the data folder before uninstalling with data removal."
+
+[es-es]
+name         = "Code Server"
+auth         = "coder"
+version      = "@@VERSION@@"
+descript     = "Code Server runs VS Code in your browser: edit files, open a terminal, run git and install extensions on your NAS from any device - no client software. The container already runs as an unprivileged user (uid 1000), so the editor can only touch what that user can, and everything you create (settings, extensions, projects) stays in the application data folder."
+release_note = "1. First release: Code Server 4.145.2 from Docker Hub as a non-root container (the image already runs as uid 1000). Browser IDE with terminal, git and extensions; settings and projects persist in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). The first start generates a random login password, stored in DockerAppData/codeserverdocker/data/.config/code-server/config.yaml - open that file to read or change it, then restart the app. The built-in terminal runs as uid 1000 on your NAS: keep this app on your LAN and never expose it to the internet without a TLS reverse proxy and a strong password. Back up the data folder before uninstalling with data removal."
+
+[hu-hu]
+name         = "Code Server"
+auth         = "coder"
+version      = "@@VERSION@@"
+descript     = "Code Server runs VS Code in your browser: edit files, open a terminal, run git and install extensions on your NAS from any device - no client software. The container already runs as an unprivileged user (uid 1000), so the editor can only touch what that user can, and everything you create (settings, extensions, projects) stays in the application data folder."
+release_note = "1. First release: Code Server 4.145.2 from Docker Hub as a non-root container (the image already runs as uid 1000). Browser IDE with terminal, git and extensions; settings and projects persist in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). The first start generates a random login password, stored in DockerAppData/codeserverdocker/data/.config/code-server/config.yaml - open that file to read or change it, then restart the app. The built-in terminal runs as uid 1000 on your NAS: keep this app on your LAN and never expose it to the internet without a TLS reverse proxy and a strong password. Back up the data folder before uninstalling with data removal."
+
+[ja-jp]
+name         = "Code Server"
+auth         = "coder"
+version      = "@@VERSION@@"
+descript     = "Code Server runs VS Code in your browser: edit files, open a terminal, run git and install extensions on your NAS from any device - no client software. The container already runs as an unprivileged user (uid 1000), so the editor can only touch what that user can, and everything you create (settings, extensions, projects) stays in the application data folder."
+release_note = "1. First release: Code Server 4.145.2 from Docker Hub as a non-root container (the image already runs as uid 1000). Browser IDE with terminal, git and extensions; settings and projects persist in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). The first start generates a random login password, stored in DockerAppData/codeserverdocker/data/.config/code-server/config.yaml - open that file to read or change it, then restart the app. The built-in terminal runs as uid 1000 on your NAS: keep this app on your LAN and never expose it to the internet without a TLS reverse proxy and a strong password. Back up the data folder before uninstalling with data removal."
+
+[ko-kr]
+name         = "Code Server"
+auth         = "coder"
+version      = "@@VERSION@@"
+descript     = "Code Server runs VS Code in your browser: edit files, open a terminal, run git and install extensions on your NAS from any device - no client software. The container already runs as an unprivileged user (uid 1000), so the editor can only touch what that user can, and everything you create (settings, extensions, projects) stays in the application data folder."
+release_note = "1. First release: Code Server 4.145.2 from Docker Hub as a non-root container (the image already runs as uid 1000). Browser IDE with terminal, git and extensions; settings and projects persist in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). The first start generates a random login password, stored in DockerAppData/codeserverdocker/data/.config/code-server/config.yaml - open that file to read or change it, then restart the app. The built-in terminal runs as uid 1000 on your NAS: keep this app on your LAN and never expose it to the internet without a TLS reverse proxy and a strong password. Back up the data folder before uninstalling with data removal."
+
+[pl-pl]
+name         = "Code Server"
+auth         = "coder"
+version      = "@@VERSION@@"
+descript     = "Code Server runs VS Code in your browser: edit files, open a terminal, run git and install extensions on your NAS from any device - no client software. The container already runs as an unprivileged user (uid 1000), so the editor can only touch what that user can, and everything you create (settings, extensions, projects) stays in the application data folder."
+release_note = "1. First release: Code Server 4.145.2 from Docker Hub as a non-root container (the image already runs as uid 1000). Browser IDE with terminal, git and extensions; settings and projects persist in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). The first start generates a random login password, stored in DockerAppData/codeserverdocker/data/.config/code-server/config.yaml - open that file to read or change it, then restart the app. The built-in terminal runs as uid 1000 on your NAS: keep this app on your LAN and never expose it to the internet without a TLS reverse proxy and a strong password. Back up the data folder before uninstalling with data removal."
+
+[ru-ru]
+name         = "Code Server"
+auth         = "coder"
+version      = "@@VERSION@@"
+descript     = "Code Server runs VS Code in your browser: edit files, open a terminal, run git and install extensions on your NAS from any device - no client software. The container already runs as an unprivileged user (uid 1000), so the editor can only touch what that user can, and everything you create (settings, extensions, projects) stays in the application data folder."
+release_note = "1. First release: Code Server 4.145.2 from Docker Hub as a non-root container (the image already runs as uid 1000). Browser IDE with terminal, git and extensions; settings and projects persist in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). The first start generates a random login password, stored in DockerAppData/codeserverdocker/data/.config/code-server/config.yaml - open that file to read or change it, then restart the app. The built-in terminal runs as uid 1000 on your NAS: keep this app on your LAN and never expose it to the internet without a TLS reverse proxy and a strong password. Back up the data folder before uninstalling with data removal."
+
+[tr-tr]
+name         = "Code Server"
+auth         = "coder"
+version      = "@@VERSION@@"
+descript     = "Code Server runs VS Code in your browser: edit files, open a terminal, run git and install extensions on your NAS from any device - no client software. The container already runs as an unprivileged user (uid 1000), so the editor can only touch what that user can, and everything you create (settings, extensions, projects) stays in the application data folder."
+release_note = "1. First release: Code Server 4.145.2 from Docker Hub as a non-root container (the image already runs as uid 1000). Browser IDE with terminal, git and extensions; settings and projects persist in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). The first start generates a random login password, stored in DockerAppData/codeserverdocker/data/.config/code-server/config.yaml - open that file to read or change it, then restart the app. The built-in terminal runs as uid 1000 on your NAS: keep this app on your LAN and never expose it to the internet without a TLS reverse proxy and a strong password. Back up the data folder before uninstalling with data removal."
+
+[pt-pt]
+name         = "Code Server"
+auth         = "coder"
+version      = "@@VERSION@@"
+descript     = "Code Server runs VS Code in your browser: edit files, open a terminal, run git and install extensions on your NAS from any device - no client software. The container already runs as an unprivileged user (uid 1000), so the editor can only touch what that user can, and everything you create (settings, extensions, projects) stays in the application data folder."
+release_note = "1. First release: Code Server 4.145.2 from Docker Hub as a non-root container (the image already runs as uid 1000). Browser IDE with terminal, git and extensions; settings and projects persist in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). The first start generates a random login password, stored in DockerAppData/codeserverdocker/data/.config/code-server/config.yaml - open that file to read or change it, then restart the app. The built-in terminal runs as uid 1000 on your NAS: keep this app on your LAN and never expose it to the internet without a TLS reverse proxy and a strong password. Back up the data folder before uninstalling with data removal."
+
+[ar-sa]
+name         = "Code Server"
+auth         = "coder"
+version      = "@@VERSION@@"
+descript     = "Code Server runs VS Code in your browser: edit files, open a terminal, run git and install extensions on your NAS from any device - no client software. The container already runs as an unprivileged user (uid 1000), so the editor can only touch what that user can, and everything you create (settings, extensions, projects) stays in the application data folder."
+release_note = "1. First release: Code Server 4.145.2 from Docker Hub as a non-root container (the image already runs as uid 1000). Browser IDE with terminal, git and extensions; settings and projects persist in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). The first start generates a random login password, stored in DockerAppData/codeserverdocker/data/.config/code-server/config.yaml - open that file to read or change it, then restart the app. The built-in terminal runs as uid 1000 on your NAS: keep this app on your LAN and never expose it to the internet without a TLS reverse proxy and a strong password. Back up the data folder before uninstalling with data removal."
+
+[cs-cz]
+name         = "Code Server"
+auth         = "coder"
+version      = "@@VERSION@@"
+descript     = "Code Server runs VS Code in your browser: edit files, open a terminal, run git and install extensions on your NAS from any device - no client software. The container already runs as an unprivileged user (uid 1000), so the editor can only touch what that user can, and everything you create (settings, extensions, projects) stays in the application data folder."
+release_note = "1. First release: Code Server 4.145.2 from Docker Hub as a non-root container (the image already runs as uid 1000). Browser IDE with terminal, git and extensions; settings and projects persist in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). The first start generates a random login password, stored in DockerAppData/codeserverdocker/data/.config/code-server/config.yaml - open that file to read or change it, then restart the app. The built-in terminal runs as uid 1000 on your NAS: keep this app on your LAN and never expose it to the internet without a TLS reverse proxy and a strong password. Back up the data folder before uninstalling with data removal."
+
+[he-il]
+name         = "Code Server"
+auth         = "coder"
+version      = "@@VERSION@@"
+descript     = "Code Server runs VS Code in your browser: edit files, open a terminal, run git and install extensions on your NAS from any device - no client software. The container already runs as an unprivileged user (uid 1000), so the editor can only touch what that user can, and everything you create (settings, extensions, projects) stays in the application data folder."
+release_note = "1. First release: Code Server 4.145.2 from Docker Hub as a non-root container (the image already runs as uid 1000). Browser IDE with terminal, git and extensions; settings and projects persist in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). The first start generates a random login password, stored in DockerAppData/codeserverdocker/data/.config/code-server/config.yaml - open that file to read or change it, then restart the app. The built-in terminal runs as uid 1000 on your NAS: keep this app on your LAN and never expose it to the internet without a TLS reverse proxy and a strong password. Back up the data folder before uninstalling with data removal."
+
+[id-id]
+name         = "Code Server"
+auth         = "coder"
+version      = "@@VERSION@@"
+descript     = "Code Server runs VS Code in your browser: edit files, open a terminal, run git and install extensions on your NAS from any device - no client software. The container already runs as an unprivileged user (uid 1000), so the editor can only touch what that user can, and everything you create (settings, extensions, projects) stays in the application data folder."
+release_note = "1. First release: Code Server 4.145.2 from Docker Hub as a non-root container (the image already runs as uid 1000). Browser IDE with terminal, git and extensions; settings and projects persist in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). The first start generates a random login password, stored in DockerAppData/codeserverdocker/data/.config/code-server/config.yaml - open that file to read or change it, then restart the app. The built-in terminal runs as uid 1000 on your NAS: keep this app on your LAN and never expose it to the internet without a TLS reverse proxy and a strong password. Back up the data folder before uninstalling with data removal."
+
+[nb-no]
+name         = "Code Server"
+auth         = "coder"
+version      = "@@VERSION@@"
+descript     = "Code Server runs VS Code in your browser: edit files, open a terminal, run git and install extensions on your NAS from any device - no client software. The container already runs as an unprivileged user (uid 1000), so the editor can only touch what that user can, and everything you create (settings, extensions, projects) stays in the application data folder."
+release_note = "1. First release: Code Server 4.145.2 from Docker Hub as a non-root container (the image already runs as uid 1000). Browser IDE with terminal, git and extensions; settings and projects persist in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). The first start generates a random login password, stored in DockerAppData/codeserverdocker/data/.config/code-server/config.yaml - open that file to read or change it, then restart the app. The built-in terminal runs as uid 1000 on your NAS: keep this app on your LAN and never expose it to the internet without a TLS reverse proxy and a strong password. Back up the data folder before uninstalling with data removal."
+
+[nl-nl]
+name         = "Code Server"
+auth         = "coder"
+version      = "@@VERSION@@"
+descript     = "Code Server runs VS Code in your browser: edit files, open a terminal, run git and install extensions on your NAS from any device - no client software. The container already runs as an unprivileged user (uid 1000), so the editor can only touch what that user can, and everything you create (settings, extensions, projects) stays in the application data folder."
+release_note = "1. First release: Code Server 4.145.2 from Docker Hub as a non-root container (the image already runs as uid 1000). Browser IDE with terminal, git and extensions; settings and projects persist in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). The first start generates a random login password, stored in DockerAppData/codeserverdocker/data/.config/code-server/config.yaml - open that file to read or change it, then restart the app. The built-in terminal runs as uid 1000 on your NAS: keep this app on your LAN and never expose it to the internet without a TLS reverse proxy and a strong password. Back up the data folder before uninstalling with data removal."
+
+[sv-se]
+name         = "Code Server"
+auth         = "coder"
+version      = "@@VERSION@@"
+descript     = "Code Server runs VS Code in your browser: edit files, open a terminal, run git and install extensions on your NAS from any device - no client software. The container already runs as an unprivileged user (uid 1000), so the editor can only touch what that user can, and everything you create (settings, extensions, projects) stays in the application data folder."
+release_note = "1. First release: Code Server 4.145.2 from Docker Hub as a non-root container (the image already runs as uid 1000). Browser IDE with terminal, git and extensions; settings and projects persist in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). The first start generates a random login password, stored in DockerAppData/codeserverdocker/data/.config/code-server/config.yaml - open that file to read or change it, then restart the app. The built-in terminal runs as uid 1000 on your NAS: keep this app on your LAN and never expose it to the internet without a TLS reverse proxy and a strong password. Back up the data folder before uninstalling with data removal."
+
+[th-th]
+name         = "Code Server"
+auth         = "coder"
+version      = "@@VERSION@@"
+descript     = "Code Server runs VS Code in your browser: edit files, open a terminal, run git and install extensions on your NAS from any device - no client software. The container already runs as an unprivileged user (uid 1000), so the editor can only touch what that user can, and everything you create (settings, extensions, projects) stays in the application data folder."
+release_note = "1. First release: Code Server 4.145.2 from Docker Hub as a non-root container (the image already runs as uid 1000). Browser IDE with terminal, git and extensions; settings and projects persist in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). The first start generates a random login password, stored in DockerAppData/codeserverdocker/data/.config/code-server/config.yaml - open that file to read or change it, then restart the app. The built-in terminal runs as uid 1000 on your NAS: keep this app on your LAN and never expose it to the internet without a TLS reverse proxy and a strong password. Back up the data folder before uninstalling with data removal."
+
+[vi-vn]
+name         = "Code Server"
+auth         = "coder"
+version      = "@@VERSION@@"
+descript     = "Code Server runs VS Code in your browser: edit files, open a terminal, run git and install extensions on your NAS from any device - no client software. The container already runs as an unprivileged user (uid 1000), so the editor can only touch what that user can, and everything you create (settings, extensions, projects) stays in the application data folder."
+release_note = "1. First release: Code Server 4.145.2 from Docker Hub as a non-root container (the image already runs as uid 1000). Browser IDE with terminal, git and extensions; settings and projects persist in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). The first start generates a random login password, stored in DockerAppData/codeserverdocker/data/.config/code-server/config.yaml - open that file to read or change it, then restart the app. The built-in terminal runs as uid 1000 on your NAS: keep this app on your LAN and never expose it to the internet without a TLS reverse proxy and a strong password. Back up the data folder before uninstalling with data removal."
+
