@@ -96,3 +96,19 @@ Code Server is distributed by its upstream authors under **MIT**. The container 
 ---
 
 Packaged for TOS 7 by Moechz. Upstream image used unmodified from Docker Hub.
+
+## Repository layout
+
+```
+src/                 four shipped files (config.ini, lang, svg, compose)
+scripts/build.sh     build + self-verify one architecture
+scripts/build-dual.sh build both architectures, keep <appid>_<arch>.tar.gz assets
+test/install-and-verify.sh   on-device E2E (requires uid 0; never on a production NAS)
+PRIVACY.md           privacy policy, linked from the package Help field
+NOTICE.md            licence and trademark attributions
+```
+
+## Privacy and licensing
+
+See [PRIVACY.md](PRIVACY.md) and [NOTICE.md](NOTICE.md). No telemetry; data stays
+in `/Volume1/DockerAppData/codeserverdocker/`.
